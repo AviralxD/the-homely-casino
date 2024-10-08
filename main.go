@@ -24,6 +24,9 @@ type apiConfig struct {
 func main() {
 
 	err := godotenv.Load(".env")
+	if err != nil {
+		log.Fatal("Trouble loading environment properly")
+	}
 
 	portName := os.Getenv("PORT")
 	if portName == "" {
@@ -42,7 +45,7 @@ func main() {
 
 	dbConn := database.New(Conn)
 
-	apiCfg := apiConfig{
+	_ = apiConfig{
 		DB: dbConn,
 	}
 
