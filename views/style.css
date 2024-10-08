@@ -1,0 +1,16 @@
+body {
+  background-color: #32284f;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: #32284f;  
+}
+header > div {
+  background-color: #432d7c;
+  margin: 10px;
+  padding: 20px;
+  font-size:larger;
+  border-radius: 9px;
+}
